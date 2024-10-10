@@ -50,3 +50,8 @@
 //   }
 //   return count;
 // }
+
+// Solution 2
+function countChar(string, char) {
+  return (string.match(new RegExp(char, "g")) || []).length;
+}
