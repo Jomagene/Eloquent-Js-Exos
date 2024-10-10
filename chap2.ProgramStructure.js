@@ -1,3 +1,5 @@
+// These are solutions to the program structure chapter  exercises from the book Eloquent Javascript 4th version
+
 // 1. LOOPING A TRIANGLE
 
 // Solution 1
