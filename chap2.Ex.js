@@ -33,3 +33,19 @@ for (let i = 0; i < 7; i++) {
 //   if (counter % 5 == 0) result += "Buzz";
 //   console.log(result ? result : counter);
 // }
+
+// ===============================================================
+
+// 2. CHESSBOARD
+
+// let chess = "";
+// const SIZE = 10;
+// for (let i = 0; i < SIZE; i++) {
+//   for (let j = 0; j < SIZE; j++) {
+//     if ((i + j) % 2 == 0) chess += "#";
+//     else chess += " ";
+//   }
+//   chess += "\n";
+// }
+
+// console.log(chess);
