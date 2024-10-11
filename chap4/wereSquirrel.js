@@ -263,11 +263,11 @@ function journalEvents(journal) {
   return events;
 }
 
-// for (let event of journalEvents(JOURNAL)) {
-//   let correlation = phi(tableFor(event, JOURNAL));
-//   if (correlation > 0.1 || correlation < -0.1)
-//     console.log(event, ":", correlation);
-// }
+for (let event of journalEvents(JOURNAL)) {
+  let correlation = phi(tableFor(event, JOURNAL));
+  // if (correlation > 0.1 || correlation < -0.1)
+  //   console.log(event, ":", correlation);
+}
 
 for (let entry of JOURNAL) {
   if (
@@ -276,9 +276,4 @@ for (let entry of JOURNAL) {
   )
     entry.events.push("peanut teeth");
 }
-console.log(phi(tableFor("peanut teeth", JOURNAL)));
-
-function remove(array, index) {
-  return array.slice(0, index).concat(array.slice(index + 1));
-}
-console.log(remove(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"], 4));
+// console.log(phi(tableFor("peanut teeth", JOURNAL)));
