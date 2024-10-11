@@ -60,3 +60,50 @@ function reverseArrayInPlace(array) {
   }
   return array;
 }
+
+// ===============================================================
+
+// 3. A LIST
+// Solution 1
+function arrayToList(array) {
+  let list = null;
+  for (let i = array.length - 1; i >= 0; i--) {
+    list = { value: array[i], rest: list };
+  }
+  return list;
+}
+
+function listToArray(list) {
+  let array = [];
+  while (list) {
+    let { value, rest } = list;
+    array.push(value);
+    list = rest;
+  }
+  return array;
+}
+
+function prepend(element, list) {
+  const newList = { value: element, rest: list };
+  return newList;
+}
+
+function nth(list, num) {
+  while (num > 0) {
+    list = list.rest;
+    num--;
+  }
+  return list.value;
+}
+
+//Recursive version ofthe nth function
+function nth(list, num) {
+  if (num == 0) return list.value;
+  else return nth(list.rest, num - 1);
+}
+
+//Shorter solution
+function nth(list, num) {
+  return num ? nth(list.rest, num--) : list.value;
+}
+console.log(nth(arrayToList([10, 20, 30]), 2));
