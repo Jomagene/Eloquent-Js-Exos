@@ -90,20 +90,22 @@ function prepend(element, list) {
 
 function nth(list, num) {
   while (num > 0) {
-    list = list.rest;
+    list = list?.rest;
     num--;
+    if (!list) return undefined;
   }
   return list.value;
 }
 
 //Recursive version ofthe nth function
 function nth(list, num) {
-  if (num == 0) return list.value;
+  if (!list) return undefined;
+  else if (num == 0) return list.value;
   else return nth(list.rest, num - 1);
 }
 
 //Shorter solution
 function nth(list, num) {
-  return num ? nth(list.rest, num--) : list.value;
+  return !list ? undefined : num == 0 ? list.value : nth(list.rest, --num);
 }
-console.log(nth(arrayToList([10, 20, 30]), 2));
+console.log(nth(arrayToList([10, 20, 30]), 3));
