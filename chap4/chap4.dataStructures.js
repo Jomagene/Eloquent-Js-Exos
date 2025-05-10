@@ -109,3 +109,8 @@ function nth(list, num) {
   return !list ? undefined : num == 0 ? list.value : nth(list.rest, --num);
 }
 console.log(nth(arrayToList([10, 20, 30]), 3));
+
+// ===============================================================
+
+// 3. DEEP COMPARISON
+// Solution 1
